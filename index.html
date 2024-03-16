@@ -61,6 +61,16 @@
             1px  1px 0 #000;
             margin-top: 110px;
           }
+          .frame {
+            width: 60%; 
+            height: auto;
+            border: 5px groove grey;
+            background-color: rgba(255, 0, 0, 0.2);
+            position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+          }
           
         @media screen and (min-width: 1001px) and (max-width: 1200px) {
             .title {
@@ -121,7 +131,7 @@
             .title {
             color: white;
             text-align: center;
-            font-size: 15px;
+            font-size: 30px;
             text-shadow: 
             -1px -1px 0 #000,  
             1px -1px 0 #000,
@@ -131,7 +141,7 @@
         .message {
             color: white;
             text-align: center;
-            font-size: 30px;
+            font-size: 50px;
             text-shadow: 
             -1px -1px 0 #000,  
             1px -1px 0 #000,
@@ -160,7 +170,7 @@
             transform: translate(-50%, -50%);
             font-weight: bold;
             font-weight: 700;
-            font-size: 25px;
+            font-size: 50px;
             margin: 4px 2px; /* Margin around the button */
             cursor: pointer; /* Pointer/hand icon when mouse hovers over the button */
             border-radius: 4px; /* Rounded corners */
@@ -176,6 +186,7 @@
 </head>
 
 <body>
+    <div class="frame">
     <div class="title">
         <h1 class="greeting">Konstantin and Caroline's Wedding</h1>
         <h1 class="greeting">You Are Invited On July 13th!</h1>
@@ -187,6 +198,7 @@
     <div class="button">
         <button type="button" id="myButton">Log In To Get Instructions</button>
   </div>
+</div>
     <script>
         var button = document.getElementById("myButton");
         button.addEventListener("click", function() {
