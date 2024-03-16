@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>RSVP</title>
+    <style>
+        body {
+            background-image: url('MeAndCarol.jpg');
+            background-size: cover;
+            background-attachment: fixed;
+            background-position: center;
+        }
+        body, html {
+            height: 100%;
+            display: flex;
+            justify-content: center; /* Centers horizontally */
+            align-items: center; /* Centers vertically */
+            font-family: Arial, sans-serif;
+        }
+
+        /* Additional styles for the form to ensure it doesn't stretch too much */
+        form {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            border: 5px groove grey;
+            padding: 40px;
+            border-radius: 5px;
+            background-color: rgba(255, 0, 0, 0.2);
+            color: white;
+            width: 80%; /* Significantly increased width */
+            max-width: 800px; /* Larger max-width to allow more width on larger screens */
+            margin: auto; /* Keeps the form centered */
+            font-size: 20px;
+            text-shadow: 
+            -1px -1px 0 #000,  
+            1px -1px 0 #000,
+            -1px  1px 0 #000,
+            1px  1px 0 #000;
+        }
+
+        label, input {
+            display: block; /* Makes elements occupy their own line */
+            width: 100%;
+            margin-top: 10px;
+            margin-bottom: 10px; /* Adds space below each input */
+            
+        }
+
+        input[type="text"], input[type="number"] {
+            padding: 15px; /* Increased padding for larger inputs */
+            font-size: 18px; /* Larger font size for better readability */
+            line-height: 1.5; /* Adjust line height for aesthetics and readability */
+            border-radius: 4px; /* Optional: Adds rounded corners for a modern look */
+            border: 1px groove grey; /* Slightly lighter border color */
+            margin-bottom: 10px;
+            margin-top: 10px;
+        }
+
+        input[type="submit"] {
+            background-color: rgba(255, 0, 0, 0.2);
+            color: white;
+            padding: 10px 20px;
+            margin-top: 20px;
+            margin-bottom: 20px;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 20px;
+            
+            text-shadow: 
+            -1px -1px 0 #000,  
+            1px -1px 0 #000,
+            -1px  1px 0 #000,
+            1px  1px 0 #000;
+        }
+        @media screen and (max-width: 1000px) {
+            body {
+            /* Set the background image */
+            background-image: url('KostyaAndCarol2.png');
+            /* Ensure the image covers the whole page */
+            background-size: cover;
+            /* The background image does not scroll with the page */
+            background-attachment: fixed;
+            background-position: center;
+        }
+    }
+    </style>
+</head>
+<body>
+    <form action="/submit-form" id="myForm" method="post">
+        <label for="first-name">First Name:</label>
+        <input type="text" id="first-name" name="first-name" required>
+    
+        <br><br> <!-- Adding some space between the inputs -->
+    
+        <label for="last-name">Last Name:</label>
+        <input type="text" id="last-name" name="last-name" required>
+    
+        <br><br>
+    
+        <input type="submit" id="submit" value="Submit">      
+    </form>
+    <script>
+        document.getElementById('submit').addEventListener('click', function(event) {
+            event.preventDefault(); // Prevent the default form submission
+
+            var firstName = document.getElementById('first-name').value;
+            var lastName = document.getElementById('last-name').value;
+            var enteredName = (firstName + " " + lastName).toLowerCase(); 
+
+            var guestList = ["dmitriy lebedev", "vladimir lebedev", "andrei danielyan", "chris novak", 
+            "helena novak", "jake allen", "stacey allen", "cornel crisan", "anthony jenkins", "aman gabriel", 
+            "emanuel favela", "yuri dziatko", "andrei grebeniukov", "deangelo anderson"];
+
+            function getEditDistance(a, b) {
+                if (a.length === 0) return b.length; 
+                if (b.length === 0) return a.length;
+                var matrix = [];
+        
+                // increment along the first column of each row
+                var i;
+                for (i = 0; i <= b.length; i++) {
+                    matrix[i] = [i];
+                }
+        
+                // increment each column in the first row
+                var j;
+                for (j = 0; j <= a.length; j++) {
+                    matrix[0][j] = j;
+                }
+        
+                // Fill in the rest of the matrix
+                for (i = 1; i <= b.length; i++) {
+                    for (j = 1; j <= a.length; j++) {
+                        if (b.charAt(i - 1) == a.charAt(j - 1)) {
+                            matrix[i][j] = matrix[i - 1][j - 1];
+                        } else {
+                            matrix[i][j] = Math.min(matrix[i - 1][j - 1] + 1, // substitution
+                                                    Math.min(matrix[i][j - 1] + 1, // insertion
+                                                             matrix[i - 1][j] + 1)); // deletion
+                        }
+                    }
+                }
+        
+                return matrix[b.length][a.length];
+            };
+        
+            // Check if there's a name in the guest list close enough to the guestName
+            var matchedName = guestList.find(function(listName) {
+                return getEditDistance(enteredName, listName) <= 3;
+            });
+
+            if (matchedName) {
+                localStorage.setItem('guestName', matchedName); // Store guest name in localStorage
+                location.href="message.html";
+            } else {
+                alert("Entered Name Is Not Registered, Check Spelling!");
+            }
+            });
+    </script>  
+</body>
