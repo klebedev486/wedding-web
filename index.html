@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <title>Wedding</title>
@@ -24,20 +23,8 @@
             background-attachment: fixed;
             background-position: center;
         }
-        th, td {
-            text-align: left;
-            padding: 8px;
-        }
-        td {
-            color:white;
-            font-weight: bold;
-            font-weight: 700;
-            font-size: 30px;
-            text-shadow: 
-            -1px -1px 0 #000,  
-            1px -1px 0 #000,
-            -1px  1px 0 #000,
-            1px  1px 0 #000;
+        .greeting {
+            margin-bottom: 20px;
         }
         .message {
             color: white;
@@ -49,14 +36,6 @@
             -1px  1px 0 #000,
             1px  1px 0 #000;
             margin-top: 50px;
-        }
-        table {
-            border-collapse: collapse;
-            table-layout: auto; 
-            margin-left: auto;
-            margin-right: auto;
-            background-color: rgba(255, 0, 0, 0.2);
-            margin-top: 100px;
         }
         button {
             background-color: rgba(255, 0, 0, 0.2); 
@@ -81,91 +60,22 @@
             1px  1px 0 #000;
             margin-top: 110px;
           }
-          .separator-cell {
-            height: 20px;
-        }
-        @media screen and (max-width: 800px) {
-            .title {
-            color: white;
-            text-align: center;
-            font-size: 15px;
-            text-shadow: 
-            -1px -1px 0 #000,  
-            1px -1px 0 #000,
-            -1px  1px 0 #000,
-            1px  1px 0 #000;
-        }
-        td {
-            color:white;
-            font-weight: bold;
-            font-weight: 700;
-            font-size: 23px;
-            text-shadow: 
-            -1px -1px 0 #000,  
-            1px -1px 0 #000,
-            -1px  1px 0 #000,
-            1px  1px 0 #000;
-        }
-        .message {
-            color: white;
-            text-align: center;
-            font-size: 30px;
-            text-shadow: 
-            -1px -1px 0 #000,  
-            1px -1px 0 #000,
-            -1px  1px 0 #000,
-            1px  1px 0 #000;
-            margin-top: 90px;
-        }
-        body {
-            /* Set the background image */
-            background-image: url('KostyaAndCarol2.png');
-            /* Ensure the image covers the whole page */
-            background-size: cover;
-            /* The background image does not scroll with the page */
-            background-attachment: fixed;
-            background-position: center;
-        }
-        button {
-            background-color: rgba(255, 0, 0, 0.2); 
-            border-collapse: collapse; 
-            color: white; 
-            padding: 15px 32px; /* Top and bottom padding, left and right padding */
-            text-align: center; /* Centered text */
-            position: relative;
-            margin-top: 50%;
+          .frame {
+            width: 70%; 
+            height: auto;
+            border: 5px groove grey;
+            background-color: rgba(255, 0, 0, 0.2);
+            position: fixed;
+            top: 50%;
             left: 50%;
             transform: translate(-50%, -50%);
-            font-weight: bold;
-            font-weight: 700;
-            font-size: 25px;
-            margin: 4px 2px; /* Margin around the button */
-            cursor: pointer; /* Pointer/hand icon when mouse hovers over the button */
-            border-radius: 4px; /* Rounded corners */
-            text-shadow: 
-            -1px -1px 0 #000,  
-            1px -1px 0 #000,
-            -1px  1px 0 #000,
-            1px  1px 0 #000;
-            margin-top: 110px;
           }
-    }
-    @media screen and (min-width: 800px) and (max-width: 1100px) {
+          
+        @media screen and (min-width: 1001px) and (max-width: 1200px) {
             .title {
             color: white;
             text-align: center;
             font-size: 25px;
-            text-shadow: 
-            -1px -1px 0 #000,  
-            1px -1px 0 #000,
-            -1px  1px 0 #000,
-            1px  1px 0 #000;
-        }
-        td {
-            color:white;
-            font-weight: bold;
-            font-weight: 700;
-            font-size: 30px;
             text-shadow: 
             -1px -1px 0 #000,  
             1px -1px 0 #000,
@@ -216,38 +126,77 @@
             margin-top: 110px;
           }
     }
+        @media screen and (max-width: 1000px) {
+            .title {
+            color: white;
+            text-align: center;
+            font-size: 30px;
+            text-shadow: 
+            -1px -1px 0 #000,  
+            1px -1px 0 #000,
+            -1px  1px 0 #000,
+            1px  1px 0 #000;
+        }
+        .message {
+            color: white;
+            text-align: center;
+            font-size: 40px;
+            text-shadow: 
+            -1px -1px 0 #000,  
+            1px -1px 0 #000,
+            -1px  1px 0 #000,
+            1px  1px 0 #000;
+            margin-top: 90px;
+        }
+        body {
+            /* Set the background image */
+            background-image: url('KostyaAndCarol2.png');
+            /* Ensure the image covers the whole page */
+            background-size: cover;
+            /* The background image does not scroll with the page */
+            background-attachment: fixed;
+            background-position: center;
+        }
+        button {
+            background-color: rgba(255, 0, 0, 0.2); 
+            border-collapse: collapse; 
+            color: white; 
+            padding: 15px 32px; /* Top and bottom padding, left and right padding */
+            text-align: center; /* Centered text */
+            position: relative;
+            margin-top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            font-weight: bold;
+            font-weight: 700;
+            font-size: 50px;
+            margin: 4px 2px; /* Margin around the button */
+            cursor: pointer; /* Pointer/hand icon when mouse hovers over the button */
+            border-radius: 4px; /* Rounded corners */
+            text-shadow: 
+            -1px -1px 0 #000,  
+            1px -1px 0 #000,
+            -1px  1px 0 #000,
+            1px  1px 0 #000;
+            margin-top: 110px;
+          }
+    }
     </style>
 </head>
-
 <body>
+    <div class="frame">
     <div class="title">
-        <h1>Konstantin and Caroline's Wedding</h1>
-        <h1>You Are Invited On July 13th!</h1>
-        <h2></h2>
+        <h1 class="greeting">Konstantin and Caroline's Wedding</h1>
+        <h1 class="greeting">You Are Invited On July 13th!</h1>
     </div>
-    <div>
-        <table border="5"> <!-- Adding a border for visibility; '1' is the thickness -->
-            <tr>
-                <td>Ceremony at 2pm</td>
-            </tr>
-            <tr>
-                <td>3231 N Cicero Ave, Chicago, IL 60641</td>
-            </tr>
-            <td class="separator-cell"></td>
-            <tr>
-                <td>Reception at 5pm</td>
-            </tr>
-            <tr>
-                <td>2139 City Gate Ln, Naperville, IL 60563</td>
-            </tr>
-        </table>
-    </div>
-    <div class="button">
-        <button type="button" id="myButton">RSVP</button>
-  </div>
     <div>
         <h2 class="message">Join Us In This Celebration!</h2>
+        <h2 class="message">Click Below To Register</h2>
     </div>
+    <div class="button">
+        <button type="button" id="myButton">Log In To Get Instructions</button>
+  </div>
+</div>
     <script>
         var button = document.getElementById("myButton");
         button.addEventListener("click", function() {

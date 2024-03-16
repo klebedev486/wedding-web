@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <title>Greeting</title>
@@ -43,13 +42,13 @@
             border: 5px groove grey;
             background-color: rgba(255, 0, 0, 0.2);
         }
-        @media screen and (max-width: 860px) {
+        @media screen and (max-width: 1000px) {
         .parkingDiv {
             width: auto;
             height: auto;
             max-width: 100%
         }
-        @media screen and (max-width: 800px) {
+        @media screen and (max-width: 1000px) {
             body {
             /* Set the background image */
             background-image: url('KostyaAndCarol2.png');
@@ -104,9 +103,7 @@
     </div>
         <script>
             var namesAndTables = [document.querySelector('.guestNames'), document.querySelector('.tableNumber')];
-
             var guestName = localStorage.getItem('guestName');
-
             if (guestName !== null) {
             switch (guestName) {
                 case "dmitriy lebedev":
