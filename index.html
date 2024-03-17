@@ -16,6 +16,7 @@
         .frame {
             width: 70%; 
             height: auto;
+            max-height: 97%;
             border: 5px groove grey;
             background-color: rgba(255, 0, 0, 0.2);
             position: fixed;
@@ -42,7 +43,7 @@
             1px -1px 0 #000,
             -1px  1px 0 #000,
             1px  1px 0 #000;
-            margin-top: 12%;
+            margin-top: 8%;
         }
         .title3 {
             color: white;
@@ -53,7 +54,7 @@
             1px -1px 0 #000,
             -1px  1px 0 #000,
             1px  1px 0 #000;
-            margin-top: 12%;
+            margin-top: 8%;
         }
         .greeting {
             margin-bottom: 20px;
@@ -65,6 +66,9 @@
             1px -1px 0 #000,
             -1px  1px 0 #000,
             1px  1px 0 #000;
+        }
+        .greetingTop {
+            font-size: 55px;
         }
         button {
             background-color: rgba(255, 0, 0, 0.2); 
@@ -90,71 +94,9 @@
             margin-top: 100px;
             margin-bottom: 20px;
           }
-        @media screen and (min-width: 1001px) and (max-width: 1200px) {
-            body {
-            /* Set the background image */
-            background-image: url('MeAndCarol.jpg');
-            /* Ensure the image covers the whole page */
-            background-size: cover;
-            /* The background image does not scroll with the page */
-            background-attachment: fixed;
-            background-position: center;
-        }
-            .title {
-            color: white;
-            text-align: center;
-            font-size: 25px;
-            text-shadow: 
-            -1px -1px 0 #000,  
-            1px -1px 0 #000,
-            -1px  1px 0 #000,
-            1px  1px 0 #000;
-            margin-top: 20px;
-        }
-        .greeting {
-            color: white;
-            text-align: center;
-            font-size: 45px;
-            text-shadow: 
-            -1px -1px 0 #000,  
-            1px -1px 0 #000,
-            -1px  1px 0 #000,
-            1px  1px 0 #000;
-            margin-top: 70px;
-        }
-        button {
-            background-color: rgba(255, 0, 0, 0.2); 
-            border-collapse: collapse; 
-            color: white; 
-            padding: 15px 32px; /* Top and bottom padding, left and right padding */
-            text-align: center; /* Centered text */
-            position: relative;
-            margin-top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-            font-weight: bold;
-            font-weight: 700;
-            font-size: 35px;
-            margin: 4px 2px; /* Margin around the button */
-            cursor: pointer; /* Pointer/hand icon when mouse hovers over the button */
-            border-radius: 4px; /* Rounded corners */
-            text-shadow: 
-            -1px -1px 0 #000,  
-            1px -1px 0 #000,
-            -1px  1px 0 #000,
-            1px  1px 0 #000;
-            margin-top: 110px;
-          }
-    }
         @media screen and (max-width: 1000px) {
             body {
-            /* Set the background image */
             background-image: url('KostyaAndCarol2.png');
-            /* Ensure the image covers the whole page */
-            background-size: cover;
-            /* The background image does not scroll with the page */
-            background-attachment: fixed;
-            background-position: center;
         }
             .title {
             color: white;
@@ -177,6 +119,17 @@
             1px  1px 0 #000;
             margin-top: 12%;
         }
+        .title3 {
+            color: white;
+            text-align: center;
+            font-size: 50px;
+            text-shadow: 
+            -1px -1px 0 #000,  
+            1px -1px 0 #000,
+            -1px  1px 0 #000,
+            1px  1px 0 #000;
+            margin-top: 12%;
+        }
         .greeting {
             color: white;
             text-align: center;
@@ -187,6 +140,9 @@
             -1px  1px 0 #000,
             1px  1px 0 #000;
             margin-top: auto;
+        }
+        .greetingTop {
+            font-size: 45px;
         }
         button {
             background-color: rgba(255, 0, 0, 0.2); 
@@ -209,7 +165,7 @@
             1px -1px 0 #000,
             -1px  1px 0 #000,
             1px  1px 0 #000;
-            margin-top: 20%;
+            margin-top: 12%;
             margin-bottom: 10%;
           }
     }
@@ -218,7 +174,7 @@
 <body>
     <div class="frame">
     <div class="title">
-        <h1 class="greeting">Konstantin and Caroline's Wedding</h1>
+        <h1 class="greetingTop">Konstantin and Caroline's Wedding</h1>
         <h1 class="greeting">You Are Invited On July 13th!</h1>
         <h1 class="greeting"; id="countdown"></h1>
         <script src="countdown.js"></script>
