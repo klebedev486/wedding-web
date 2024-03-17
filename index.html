@@ -4,16 +4,6 @@
     <meta charset="UTF-8">
     <title>Wedding</title>
     <style>
-        .title {
-            color: white;
-            text-align: center;
-            font-size: 50px;
-            text-shadow: 
-            -1px -1px 0 #000,  
-            1px -1px 0 #000,
-            -1px  1px 0 #000,
-            1px  1px 0 #000;
-        }
         body {
             /* Set the background image */
             background-image: url('MeAndCarol.jpg');
@@ -23,11 +13,20 @@
             background-attachment: fixed;
             background-position: center;
         }
-        .greeting {
-            margin-bottom: 20px;
-            font-size: 50px;
-            text-align: center;
+        .frame {
+            width: 70%; 
+            height: auto;
+            border: 5px groove grey;
+            background-color: rgba(255, 0, 0, 0.2);
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+          }
+        .title {
             color: white;
+            text-align: center;
+            font-size: 50px;
             text-shadow: 
             -1px -1px 0 #000,  
             1px -1px 0 #000,
@@ -45,7 +44,28 @@
             1px  1px 0 #000;
             margin-top: 12%;
         }
-        
+        .title3 {
+            color: white;
+            text-align: center;
+            font-size: 50px;
+            text-shadow: 
+            -1px -1px 0 #000,  
+            1px -1px 0 #000,
+            -1px  1px 0 #000,
+            1px  1px 0 #000;
+            margin-top: 12%;
+        }
+        .greeting {
+            margin-bottom: 20px;
+            font-size: 50px;
+            text-align: center;
+            color: white;
+            text-shadow: 
+            -1px -1px 0 #000,  
+            1px -1px 0 #000,
+            -1px  1px 0 #000,
+            1px  1px 0 #000;
+        }
         button {
             background-color: rgba(255, 0, 0, 0.2); 
             border-collapse: collapse; 
@@ -70,18 +90,16 @@
             margin-top: 100px;
             margin-bottom: 20px;
           }
-          .frame {
-            width: 70%; 
-            height: auto;
-            border: 5px groove grey;
-            background-color: rgba(255, 0, 0, 0.2);
-            position: fixed;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-          }
-          
         @media screen and (min-width: 1001px) and (max-width: 1200px) {
+            body {
+            /* Set the background image */
+            background-image: url('MeAndCarol.jpg');
+            /* Ensure the image covers the whole page */
+            background-size: cover;
+            /* The background image does not scroll with the page */
+            background-attachment: fixed;
+            background-position: center;
+        }
             .title {
             color: white;
             text-align: center;
@@ -103,15 +121,6 @@
             -1px  1px 0 #000,
             1px  1px 0 #000;
             margin-top: 70px;
-        }
-        body {
-            /* Set the background image */
-            background-image: url('MeAndCarol.jpg');
-            /* Ensure the image covers the whole page */
-            background-size: cover;
-            /* The background image does not scroll with the page */
-            background-attachment: fixed;
-            background-position: center;
         }
         button {
             background-color: rgba(255, 0, 0, 0.2); 
@@ -138,6 +147,15 @@
           }
     }
         @media screen and (max-width: 1000px) {
+            body {
+            /* Set the background image */
+            background-image: url('KostyaAndCarol2.png');
+            /* Ensure the image covers the whole page */
+            background-size: cover;
+            /* The background image does not scroll with the page */
+            background-attachment: fixed;
+            background-position: center;
+        }
             .title {
             color: white;
             text-align: center;
@@ -147,6 +165,17 @@
             -1px  1px 0 #000,
             1px  1px 0 #000;
             margin-top: 10%;
+        }
+        .title2 {
+            color: white;
+            text-align: center;
+            font-size: 50px;
+            text-shadow: 
+            -1px -1px 0 #000,  
+            1px -1px 0 #000,
+            -1px  1px 0 #000,
+            1px  1px 0 #000;
+            margin-top: 12%;
         }
         .greeting {
             color: white;
@@ -158,15 +187,6 @@
             -1px  1px 0 #000,
             1px  1px 0 #000;
             margin-top: auto;
-        }
-        body {
-            /* Set the background image */
-            background-image: url('KostyaAndCarol2.png');
-            /* Ensure the image covers the whole page */
-            background-size: cover;
-            /* The background image does not scroll with the page */
-            background-attachment: fixed;
-            background-position: center;
         }
         button {
             background-color: rgba(255, 0, 0, 0.2); 
@@ -206,6 +226,8 @@
     
     <div class="title2">
         <h1 class="greeting">Join Us In This Celebration!</h1>
+    </div>
+    <div class="title3">
         <h1 class="greeting">Click Below To Log In</h1>
     </div>
     <div class="button">
