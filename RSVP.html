@@ -79,51 +79,30 @@
             background-attachment: fixed;
             background-position: center;
         }
-        
-        form {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            border: 5px groove grey;
-            padding: 40px;
-            border-radius: 5px;
-            background-color: rgba(255, 0, 0, 0.2);
-            color: white;
-            width: 90%; /* Adjusted width */
-            max-width: 1000px; /* Maximum width */
-            margin: auto; /* Keeps the form centered */
-            font-size: 40px;
-            text-shadow: 
-            -1px -1px 0 #000,  
-            1px -1px 0 #000,
-            -1px  1px 0 #000,
-            1px  1px 0 #000;
-        }
-        input[type="text"], input[type="number"] {
-            padding: 15px; /* Increased padding for larger inputs */
-            font-size: 18px; /* Larger font size for better readability */
-            line-height: 1.5; /* Adjust line height for aesthetics and readability */
-            border-radius: 4px; /* Optional: Adds rounded corners for a modern look */
-            border: 1px groove grey; /* Slightly lighter border color */
-            margin-bottom: 10px;
-            margin-top: 10px;
-        }
-        input[type="submit"] {
-            background-color: rgba(255, 0, 0, 0.2);
-            color: white;
-            padding: 10px 20px;
-            margin-top: 20px;
-            margin-bottom: 20px;
-            border-radius: 4px;
-            cursor: pointer;
-            font-size: 40px;
-            
-            text-shadow: 
-            -1px -1px 0 #000,  
-            1px -1px 0 #000,
-            -1px  1px 0 #000,
-            1px  1px 0 #000;
-        }
+        body, html {
+        font-size: 24px; /* Further increases the base font size for better readability */
+    }
+    form {
+        width: 95%; /* Further increases the form width to use more screen space */
+        padding: 40px; /* Increases padding for a larger appearance */
+        font-size: 26px; /* Further increases the font size for better readability */
+        border-radius: 10px; /* Optional: Adjusts border-radius for a more pronounced effect */
+    }
+    label, input {
+        width: 80%; /* Maintains the width of inputs at 80% of the form's width */
+        margin-left: auto; /* Centers the input fields horizontally */
+        margin-right: auto; /* within the form */
+    }
+    input[type="text"], input[type="number"] {
+        padding: 25px; /* Further increases padding for larger touch targets */
+        font-size: 24px; /* Further increases font size for better readability */
+        border-radius: 6px; /* Optional: Adjusts border-radius for input fields */
+    }
+    input[type="submit"] {
+        padding: 20px 25px; /* Adjusts padding for a larger appearance */
+        font-size: 26px; /* Increases font size for better visibility and interaction */
+        border-radius: 6px; /* Optional: Adjusts border-radius for the submit button */
+    }
         }
     </style>
 </head>
