@@ -1,4 +1,4 @@
-const targetDate = new Date(2024, 7, 13); 
+const targetDate = new Date(2024, 6, 13); 
 
 // Function to update the countdown timer
 function updateCountdown() {
