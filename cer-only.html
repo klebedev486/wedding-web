@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Wedding</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style>
+    body {
+        /* Set the background image */
+       background-image: url('MeAndCarol.jpg');
+       /* Ensure the image covers the whole page */
+        background-size: cover;
+        /* The background image does not scroll with the page */
+        background-attachment: fixed;
+        background-position: center;
+        color: white;
+        text-shadow: 
+        -1px -1px 0 #000,  
+        1px -1px 0 #000,
+        -1px  1px 0 #000,
+        1px  1px 0 #000;
+        }
+    /* .upper-left-up {
+        position: fixed;
+        writing-mode: vertical-lr; 
+        transform-origin: bottom right; 
+        transform: rotate(180deg) translateY(85%) translateX(120%);
+        
+        } */  
+    .upper-left-right {
+        position: fixed;
+        writing-mode: horizontal; 
+        left: 30%;
+        top: calc(-8px); 
+        transform: translateX(-50%);
+        }
+    #deco-size {
+        font-size: 30px;
+        font-family: Bree Serif;
+        }
+    /* .menu {
+        position: fixed;
+        top: calc(100px + 2em); 
+        left: 30%;
+        transform: translateX(-50%);
+        display: flex;
+        flex-direction: row;
+        gap: 20px; 
+        font-family: Abril Fatface;
+        }
+    .menu a {
+        text-decoration: none; 
+        color: inherit; 
+        background-color: hsla(229, 74%, 46%, 0.814);
+        border: 5px groove grey;
+        padding: 1px 10px;
+        box-sizing: border-box;
+        } */
+    .right-side-image {
+        position: fixed;
+        right: 10px; 
+        top: 30px; 
+        width: 600px; 
+        height: auto; 
+        border: 5px groove grey;
+        }
+    .mainDiv {
+        position: fixed;
+        border: 5px groove grey;
+        background-color: hsla(229, 74%, 46%, 0.814);
+        width: 45%;
+        height: 650px;
+        transform: translateX(17%) translatey(22%);
+        overflow-y: auto;
+        box-sizing: border-box; 
+        font-size: 16px;
+        font-family: Bree Serif;
+        }
+    .textUpperH2 .textLowerH2 .parkingDiv {
+        position: relative; /* Needed for absolute positioning of the child img */
+        width: 100%; /* Adjust container width as needed */
+        height: 30%; /* Adjust container height as needed */
+        display: flex; /* Use flexbox for easy centering */
+        justify-content: center; /* Center horizontally */
+        align-items: center; /* Center vertically */
+        margin: 0 auto; /* Centers the div in the middle of its parent element */   
+        }
+    .parkingImage {
+        opacity: 0.85; /* Make the image a bit transparent (adjust as needed) */
+        width: 100%;
+        max-width: 100%; /* Ensure the image is responsive and fits its container */
+        height: auto; /* Maintain aspect ratio */
+        box-sizing: border-box; /* Include border in the element's dimensions */
+        border: 5px groove grey; /* Example border: 5 pixels solid black */    
+        }
+    .tableNumber {
+        font-weight: bold; 
+        font-size: 110%; 
+        color: white; 
+        padding: 2px 6px;
+        border: 1px solid black;
+        background-color: grey;
+        border-radius: 50%; 
+        }
+    .special {
+        font-family: Abril Fatface;
+        font-size: 30px;
+    }
+    @media (max-width: 1400px) {
+    .right-side-image {
+        display: none; /* This will hide the image on small screens */
+        }
+    body {
+        background-image: url('KostyaAndCarol2.png');
+        }
+        #deco-size {
+        font-size: 27px;
+        }
+    .menu {
+        position: fixed;
+        top: calc(100px + 2em); /* Adjust this to position just below .upper-left-right */
+        left: 50%; /* Center horizontally */
+        transform: translateX(-50%); /* Adjust for centering */
+        flex-direction: row; /* Stack links vertically for smaller screens */
+        gap: 10px; /* Adjust gap for a vertical layout */
+        display: none;
+        }
+    .upper-left-right {
+        
+        left: 50%;
+        top: 10px; /* Adjusted from calc(-8px) to ensure visibility */
+        transform: translateX(-50%);
+        white-space: nowrap;
+        display: none;
+        }     
+    .mainDiv {
+        position: fixed;
+        left: 50%; /* Center horizontally */
+        /* top: calc(120px);  */
+        transform: translateX(-50%); /* Center based on its width */
+        width: 99%;
+        height: 99%; /* Dynamically calculate height */
+        border: 5px groove grey;
+        background-color: hsla(229, 74%, 46%, 0.814);
+        overflow-y: auto;
+        box-sizing: border-box; 
+        margin-bottom: 10%;
+        }   
+    }
+    /* .special {
+        font-family: Caveat;
+    } */
+    @media (max-width: 1000px) {
+    #deco-size {
+        font-size: 23px; /* reduced -7 for mobile */
+        }
+    }   
+</style>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Bree+Serif&family=Caveat&family=Libre+Baskerville&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- <div class="upper-left-up" id="deco-size">
+        <h1>KONSTANTIN AND</h1>
+    </div> -->
+    <div class="upper-left-right" id="deco-size">
+        <a href="index.html" style="color: inherit; text-decoration: none;">
+            <h1>KOSTYA & CAROL</h1>
+        </a>
+    </div>
+
+    <!-- <div class="menu">
+        <a href="index.html"><h3>Main</h3></a>
+        <a href="itinerary.html"><h3>Itinerary</h3></a>
+    </div> -->
+   <div class="side-image">
+        <img src="KostyaAndCarol2.png" class="right-side-image" alt="Kostya And Carol Together">
+    </div>
+    <div class="mainDiv">
+        <div class="textH1">
+            <h1 class="greetNames">Hello <span class="guestNames">Dear Guests</span>!</h1>
+            <h1 class="greetWelcome">We are Excited to Have You at Our Wedding!</h1>
+        </div>
+        <div class="textUpperH2">
+            
+            <h2>Ceremony at 2pm: (Doors open 1:30pm)</h2> 
+            <h2>3231 N Cicero ave, Chicago, IL 60641</h2>
+            <h2>Paid street parking on Cicero</h2> 
+            <h2>Free parking lot is available 0.3mi (3min walk) away at:</h2> 
+            <h2>3251 N Kilpatrick Ave, Chicago, IL 60641</h2>     
+        </div>
+        <div class="parkingDiv">
+            <img src="ParkingWedding2.png" alt="Parking Image" class="parkingImage">
+        </div>
+        <div class="textLowerH2">
+            <h1 class="finalGreeting">Thank You and See You Soon!</h1>    
+        </div>
+    </div>
+</body>

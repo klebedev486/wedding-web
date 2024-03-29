@@ -12,7 +12,7 @@ function updateCountdown() {
     const days = Math.floor(difference / (1000 * 60 * 60 * 24));
 
     // Display the countdown in the HTML element
-    document.getElementById('countdown').innerHTML = `${days} DAYS TO GO`;
+    document.getElementById('countdown').innerHTML = `${days} DAYS TO GO!`;
 }
 
 // Call the updateCountdown function initially to display the countdown

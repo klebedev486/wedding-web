@@ -3,203 +3,174 @@
 <head>
     <meta charset="UTF-8">
     <title>Wedding</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <style>
-        body {
-            /* Set the background image */
-            background-image: url('MeAndCarol.jpg');
-            /* Ensure the image covers the whole page */
-            background-size: cover;
-            /* The background image does not scroll with the page */
-            background-attachment: fixed;
-            background-position: center;
+    body {
+        /* Set the background image */
+        background-image: url('MeAndCarol.jpg');
+        /* background-image: url('frame.png'); */
+        /* Ensure the image covers the whole page */
+        background-size: cover;
+        /* The background image does not scroll with the page */
+        background-attachment: fixed;
+        background-position: center;
+        color: white;
+        text-shadow: 
+        -1px -1px 0 #000,  
+        1px -1px 0 #000,
+        -1px  1px 0 #000,
+        1px  1px 0 #000;
         }
-        .frame {
-            width: 70%;
-            max-width: 90%; 
-            height: auto;
-            max-height: 97%;
-            border: 5px groove grey;
-            background-color: rgba(255, 0, 0, 0.2);
-            position: fixed;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-            overflow-y: auto;
-            -webkit-overflow-scrolling: touch;
-          }
-        .title {
-            color: white;
-            text-align: center;
-            font-size: 50px;
-            text-shadow: 
-            -1px -1px 0 #000,  
-            1px -1px 0 #000,
-            -1px  1px 0 #000,
-            1px  1px 0 #000;
+            
+    /* .upper-left-up {
+        position: fixed;
+        writing-mode: vertical-lr; 
+        transform-origin: bottom right; 
+        transform: rotate(180deg) translateY(85%) translateX(120%);
+        } */     
+    .upper-left-right {
+        position: fixed;
+        writing-mode: horizontal; 
+        left: 30%;
+        top: calc(-8px); 
+        transform: translateX(-50%);
         }
-        .title2 {
-            color: white;
-            text-align: center;
-            font-size: 50px;
-            text-shadow: 
-            -1px -1px 0 #000,  
-            1px -1px 0 #000,
-            -1px  1px 0 #000,
-            1px  1px 0 #000;
-            margin-top: 8%;
+    #deco-size {
+        font-size: 30px;
+        font-family: Bree Serif;
         }
-        .title3 {
-            color: white;
-            text-align: center;
-            font-size: 50px;
-            text-shadow: 
-            -1px -1px 0 #000,  
-            1px -1px 0 #000,
-            -1px  1px 0 #000,
-            1px  1px 0 #000;
-            margin-top: 8%;
+    /* .menu {
+        position: fixed;
+        top: calc(100px + 2em); 
+        left: 30%;
+        transform: translateX(-50%);
+        display: flex;
+        flex-direction: row;
+        gap: 20px; 
+        font-family: Abril Fatface;
         }
-        .greeting {
-            margin-bottom: 20px;
-            font-size: 50px;
-            text-align: center;
-            color: white;
-            text-shadow: 
-            -1px -1px 0 #000,  
-            1px -1px 0 #000,
-            -1px  1px 0 #000,
-            1px  1px 0 #000;
+    .menu a {
+        text-decoration: none; 
+        color: inherit; 
+        background-color: hsla(229, 74%, 46%, 0.814);
+        border: 5px groove grey;
+        padding: 1px 10px;
+        box-sizing: border-box;
+        } */
+    .right-side-image {
+        position: fixed;
+        right: 10px; 
+        top: 30px; 
+        width: 600px; 
+        height: auto; 
+        border: 5px groove grey;
         }
-        .greetingTop {
-            font-size: 55px;
+    .message {
+        position: fixed;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        position: fixed;
+        top: calc(170px); /* Adjust based on .menu's bottom edge */
+        left: 30%;
+        transform: translateX(-50%);
+        width: 80%; /* Or adjust to suit */
+        gap: 10px; /* Space between child elements */
+        }   
+    #button {     
+        padding: 10px 20px;
+        background-color: hsla(229, 74%, 46%, 0.814);
+        border: 5px groove grey;
+        color: white;
+        text-decoration: none;
+        border-radius: 5px;
+        font-size: 30px; 
+        margin-top: 10%;
+        font-family: Abril Fatface;
         }
-        button {
-            background-color: rgba(255, 0, 0, 0.2); 
-            border-collapse: collapse; 
-            color: white; 
-            padding: 15px 32px; /* Top and bottom padding, left and right padding */
-            text-align: center; /* Centered text */
-            position: relative;
-            margin-top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-            font-weight: bold;
-            font-weight: 700;
-            font-size: 35px;
-            margin: 4px 2px; /* Margin around the button */
-            cursor: pointer; /* Pointer/hand icon when mouse hovers over the button */
-                 /* Rounded corners */
-            text-shadow: 
-            -1px -1px 0 #000,  
-            1px -1px 0 #000,
-            -1px  1px 0 #000,
-            1px  1px 0 #000;
-            margin-top: 100px;
-            margin-bottom: 20px;
-          }
-        @media screen and (max-width: 1200px) {
-            body {
-            background-image: url('KostyaAndCarol2.png');
-        }
-        
-        .title {
-            color: white;
-            text-align: center;
-            text-shadow: 
-            -1px -1px 0 #000,  
-            1px -1px 0 #000,
-            -1px  1px 0 #000,
-            1px  1px 0 #000;
-            margin-top: 10%;
-        }
-        .title2 {
-            color: white;
-            text-align: center;
-            font-size: 50px;
-            text-shadow: 
-            -1px -1px 0 #000,  
-            1px -1px 0 #000,
-            -1px  1px 0 #000,
-            1px  1px 0 #000;
-            margin-top: 12%;
-        }
-        .title3 {
-            color: white;
-            text-align: center;
-            font-size: 50px;
-            text-shadow: 
-            -1px -1px 0 #000,  
-            1px -1px 0 #000,
-            -1px  1px 0 #000,
-            1px  1px 0 #000;
-            margin-top: 12%;
-        }
-        .greeting {
-            color: white;
-            text-align: center;
-            font-size: 40px;
-            text-shadow: 
-            -1px -1px 0 #000,  
-            1px -1px 0 #000,
-            -1px  1px 0 #000,
-            1px  1px 0 #000;
-            margin-top: auto;
-        }
-        .greetingTop {
-            font-size: 50px;
-        }
-        button {
-            background-color: rgba(255, 0, 0, 0.2); 
-            border-collapse: collapse; 
-            color: white; 
-            padding: 15px 32px; /* Top and bottom padding, left and right padding */
-            text-align: center; /* Centered text */
-            position: relative;
-            margin-top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-            font-weight: bold;
-            font-weight: 700;
-            font-size: 40px;
-            margin: 4px 2px; /* Margin around the button */
-            cursor: pointer; /* Pointer/hand icon when mouse hovers over the button */
-            border-radius: 4px; /* Rounded corners */
-            text-shadow: 
-            -1px -1px 0 #000,  
-            1px -1px 0 #000,
-            -1px  1px 0 #000,
-            1px  1px 0 #000;
-            margin-top: 12%;
-            margin-bottom: 10%;
-          }
+    h2 {
+        font-family: Bree Serif;
     }
-    </style>
+    @media (max-width: 1400px) {
+    .right-side-image {
+        display: none; /* This will hide the image on small screens */
+        }
+    body {
+        background-image: url('KostyaAndCarol2.png');
+        }
+    #deco-size {
+        font-size: 27px;
+        }
+    /* .menu {
+        position: fixed;
+        top: calc(100px + 2em);
+        left: 50%; 
+        transform: translateX(-50%); 
+        flex-direction: row; 
+        gap: 10px; 
+        } */
+    .message {
+        left: 50%;
+        }
+    .upper-left-right {     
+        left: 50%;
+        top: 10px; /* Adjusted from calc(-8px) to ensure visibility */
+        transform: translateX(-50%);
+        white-space: nowrap;
+        }
+    }
+    @media (max-width: 1000px) {
+    #deco-size {
+        font-size: 23px; /* reduced -7 for mobile */
+        }
+        #button {     
+        margin-top: 20%;
+        }
+    }   
+</style>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Bree+Serif&family=Caveat&family=Libre+Baskerville&display=swap" rel="stylesheet">
 </head>
 <body>
-    <div class="frame">
-    <div class="content">
-    <div class="title">
-        <h1 class="greetingTop">Konstantin and Caroline's Wedding</h1>
-        <h1 class="greeting">You Are Invited On July 13th!</h1>
-        <h1 class="greeting"; id="countdown"></h1>
+    <!-- <div class="upper-left-up" id="deco-size">
+        <h1>KONSTANTIN AND</h1>
+    </div> -->
+    <div class="upper-left-right" id="deco-size">
+        <a href="index.html" style="color: inherit; text-decoration: none;">
+            <h1>KOSTYA & CAROL</h1>
+        </a>
+    </div>
+    <!-- <div class="frame">
+        <img src="frame.png" id="frame"> 
+    </div> -->
+    <!-- <div class="menu">
+        <a href="index.html"><h3>Main</h3></a>
+        <a href="logIn.html"><h3>Itinerary</h3></a>
+    </div>   -->
+    <div class="message">
+        <h2>You Are Invited To Our Wedding!</h2>
+        <h2>July 13, 2024</h2>
+        <h2 id="countdown"></h2>
         <script src="countdown.js"></script>
+        <h2 id="h2-2">Join Us In This Celebration!</h2>
+        <!-- <h2 id="h2-3">Click Below To Register</h2> -->
+        <a href="logIn.html" id="button">RSVP</a>
     </div>
-    
-    <div class="title2">
-        <h1 class="greeting">Join Us In This Celebration!</h1>
+    <div class="side-image">
+        <img src="KostyaAndCarol2.png" class="right-side-image" alt="Kostya And Carol Together">
     </div>
-    <div class="title3">
-        <h1 class="greeting">Click Below To Log In</h1>
-    </div>
-    <div class="button">
-        <button type="button" id="myButton">Log In To Get Instructions</button>
-  </div>
-</div>
-</div>
     <script>
-        var button = document.getElementById("myButton");
-        button.addEventListener("click", function() {
-        window.location.href = "RSVP.html";
+        document.addEventListener('DOMContentLoaded', function () {
+            var scaleValue = '1';
+            if (window.innerWidth <= 1400) { // Example: Mobile devices
+                scaleValue = '0.8'; // Mimics zooming out
+            } 
+            var viewportMetaTag = document.createElement('meta');
+            viewportMetaTag.name = 'viewport';
+            viewportMetaTag.content = 'width=device-width, initial-scale=' + scaleValue;
+            document.getElementsByTagName('head')[0].appendChild(viewportMetaTag);
         });
     </script>
 </body>
