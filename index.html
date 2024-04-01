@@ -65,6 +65,15 @@
         height: auto; 
         border: 5px groove grey;
         }
+    .separating-line {
+        width: 400px; /* Or whatever width you prefer */
+        height: 2px; /* Thickness of the line */
+        background-color: grey; /* Color of the line */
+        margin-top: 0; /* Centers the line and adds space below it */
+        margin-bottom: 0;
+        border-top: 2px groove grey; 
+        border-bottom: 2px groove grey;
+        }
     .message {
         position: fixed;
         display: flex;
@@ -79,6 +88,14 @@
         gap: 10px; /* Space between child elements */
         font-size: 20px; 
         }   
+    .separating-line2 {
+        width: 400px; /* Or whatever width you prefer */
+        height: 2px; /* Thickness of the line */
+        background-color: grey; /* Color of the line */
+        margin-top: 1%; /* Centers the line and adds space below it */
+        border-top: 2px groove grey; 
+        border-bottom: 2px groove grey;
+        }
     #button {     
         padding: 10px 20px;
         background-color: hsla(229, 74%, 46%, 0.814);
@@ -87,7 +104,7 @@
         text-decoration: none;
         border-radius: 5px;
         font-size: 30px; 
-        margin-top: 7%;
+        margin-top: 50px;
         font-family: Abril Fatface;
         }
     h2 {
@@ -121,20 +138,32 @@
         white-space: nowrap;
         }
         #button {     
-        margin-top: 10%;
+        margin-top: 50px;
         }
+    .separating-line {
+        width: 350px;
+    }
+    .separating-line2 {
+        width: 350px;
+    }
     }   
     @media (max-width: 1000px) {
     #deco-size {
         font-size: 27px; 
         }
-        #button {     
-        margin-top: 15%;
+    #button {     
+        margin-top: 70px;
         font-size: 27px;
         }
-        .message {
+    .message {
         font-size: 16px; 
         }   
+    .separating-line {
+        width: 300px;
+    }
+    .separating-line2 {
+        width: 300px;
+    }
     }   
 </style>
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -158,11 +187,13 @@
         <a href="logIn.html"><h3>Itinerary</h3></a>
     </div>   -->
     <div class="message">
+        <div class="separating-line"></div>
         <h2>You Are Invited To Our Wedding!</h2>
         <h2>July 13, 2024</h2>
         <h2 id="countdown"></h2>
         <script src="countdown.js"></script>
         <h2 id="h2-2">Join Us In This Celebration!</h2>
+        <div class="separating-line2"></div>
         <!-- <h2 id="h2-3">Click Below To Register</h2> -->
         <a href="logIn.html" id="button">RSVP</a>
     </div>
