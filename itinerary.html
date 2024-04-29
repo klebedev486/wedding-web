@@ -7,7 +7,7 @@
     <style>
     body {
         /* Set the background image */
-       background-image: url('MeAndCarol.jpg');
+       background-image: url('kostyaCarol2.jpg');
        /* Ensure the image covers the whole page */
         background-size: cover;
         /* The background image does not scroll with the page */
@@ -60,15 +60,15 @@
         position: fixed;
         right: 10px; 
         top: 30px; 
-        width: 600px; 
-        height: auto; 
-        border: 5px groove grey;
+        width: auto; 
+        height: 90%; 
+        border: 1px groove black;
         }
     .mainDiv {
         position: fixed;
-        border: 5px groove grey;
-        background-color: hsla(229, 74%, 46%, 0.814);
-        opacity: 0.85;
+        border: 1px groove black;
+        background-color: grey;
+        opacity: 0.8;
         width: 45%;
         height: 650px;
         transform: translateX(17%) translatey(22%);
@@ -87,12 +87,12 @@
         margin: 0 auto; /* Centers the div in the middle of its parent element */   
         }
     .parkingImage {
-        opacity: 0.85; /* Make the image a bit transparent (adjust as needed) */
+        opacity: 1; /* Make the image a bit transparent (adjust as needed) */
         width: 100%;
         max-width: 100%; /* Ensure the image is responsive and fits its container */
         height: auto; /* Maintain aspect ratio */
         box-sizing: border-box; /* Include border in the element's dimensions */
-        border: 5px groove grey; /* Example border: 5 pixels solid black */    
+        border: 1px groove black; /* Example border: 5 pixels solid black */    
         }
     .tableNumber {
         font-weight: bold; 
@@ -101,6 +101,7 @@
         padding: 2px 6px;
         border: 1px solid black;
         background-color: grey;
+        opacity: 1;
         border-radius: 50%; 
         }
     .special {
@@ -109,18 +110,18 @@
     }
     @media (max-width: 1400px) {
     .right-side-image {
-        display: none; /* This will hide the image on small screens */
+        display: none; 
         }
     body {
-        background-image: url('KostyaAndCarol2.png');
+        background-image: url('kostyaCarol2.jpg');
         }
         #deco-size {
         font-size: 27px;
         }
     .menu {
         position: fixed;
-        top: calc(100px + 2em); /* Adjust this to position just below .upper-left-right */
-        left: 50%; /* Center horizontally */
+        top: calc(100px + 2em); 
+        left: 50%; 
         transform: translateX(-50%); /* Adjust for centering */
         flex-direction: row; /* Stack links vertically for smaller screens */
         gap: 10px; /* Adjust gap for a vertical layout */
@@ -141,8 +142,6 @@
         transform: translateX(-50%); /* Center based on its width */
         width: 99%;
         height: 99%; /* Dynamically calculate height */
-        border: 5px groove grey;
-        background-color: hsla(229, 74%, 46%, 0.814);
         overflow-y: auto;
         box-sizing: border-box; 
         margin-bottom: 10%;
@@ -176,7 +175,7 @@
         <a href="itinerary.html"><h3>Itinerary</h3></a>
     </div> -->
    <div class="side-image">
-        <img src="KostyaAndCarol2.png" class="right-side-image" alt="Kostya And Carol Together">
+        <img src="kostyaCarol2.jpg" class="right-side-image" alt="Kostya And Carol Together">
     </div>
     <div class="mainDiv">
         <div class="textH1">
