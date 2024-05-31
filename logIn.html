@@ -232,7 +232,7 @@
         
             // Check if there's a name in the guest list close enough to the guestName
             var matchedName = guestList.find(function(listName) {
-                return getEditDistance(enteredName, listName) <= 2;
+                return getEditDistance(enteredName, listName) <= 1;
             });
             if (matchedName) {
                 localStorage.setItem('guestName', matchedName); // Store guest name in localStorage
